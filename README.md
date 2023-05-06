@@ -11,7 +11,7 @@ This is a React application that serves as a QR code scanner. It is built as a P
 
 ## Demo
 
-You can access the live demo of this app [here](https://your-demo-url).
+You can access the live demo of this app [here](https://stellar-wisp-f842f7.netlify.app/).
 
 ## Installation
 
@@ -53,8 +53,7 @@ This app is deployed using Netlify. It is configured to automatically deploy whe
 - React Router
 - QR Code Reader Library (e.g., react-qr-reader)
 - Service Worker (for PWA functionality)
-- CSS (or a styling library like styled-components)
-
+- CSS 
 ## License
 
 This project is licensed under the MIT License.
