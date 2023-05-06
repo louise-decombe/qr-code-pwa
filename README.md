@@ -21,16 +21,19 @@ To install and run this application locally, follow these steps:
 
 ```bash
 git clone https://github.com/louise-decombe/qr-code-pwa
+```
 
 2. install the dependencies:
 
 ```bash
 npm install
+```
 
 3. Start the development server:
 
 ```bash
 npm start
+```
 
 Open your web browser and visit http://localhost:3000 to access the app.
 
