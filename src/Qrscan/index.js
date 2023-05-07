@@ -1,37 +1,28 @@
 import React, { useState } from 'react';
-import QrScanner from 'react-qr-scanner';
-
-import styles from './Qrscan.module.css';
-
 import { QrReader } from 'react-qr-reader';
 
 const Qrscan = () => {
   const [result, setResult] = useState('No result');
 
+  const handleScan = (data) => {
+    if (data) {
+      setResult(data);
+    }
+  };
+
   const handleError = (err) => {
     console.error(err);
   };
 
-  const handleScan = (result) => {
-    if (result) {
-      setResult(result);
-    }
-  };
-
-  const previewStyle = {
-    height: 240,
-    width: 320,
-  };
-
   return (
-    <div className={styles.container}>
-      <QrScanner
-        delay={500}
-        style={previewStyle}
+    <div>
+      <QrReader
+        delay={300}
         onError={handleError}
         onScan={handleScan}
+        style={{ width: '100%' }}
       />
-      <div className={styles.result}>{result}</div>
+      <p>{result}</p>
     </div>
   );
 };
