@@ -19,7 +19,7 @@ const Qrscan = () => {
       <QrReader
         delay={300}
         onError={handleError}
-        onScan={handleScan}
+        onResult={handleScan} 
         style={{ width: '100%' }}
       />
       <p>{result}</p>
