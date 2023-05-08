@@ -50,29 +50,29 @@ const Header = () => {
       >
         <ul className="sm:flex">
           <li>
-            <a
+            <p
               className="block text-white hover:bg-gray-700 px-4 py-2 rounded sm:p-0 sm:ml-2"
               href="#"
             >
               QR Code
-            </a>
+            </p>
           </li>
           <li>
-            <a
+            <p
               className="block text-white hover:bg-gray-700 px-4 py-2 rounded sm:p-0 sm:ml-2"
               href="#"
             >
               A propos
-            </a>
+            </p>
           </li>
 
           <li>
-            <a
+            <p
               className="block text-white hover:bg-gray-700 px-4 py-2 rounded sm:p-0 sm:ml-2"
               href="#"
             >
               Contact
-            </a>
+            </p>
           </li>
         </ul>
       </nav>
