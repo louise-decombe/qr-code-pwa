@@ -10,8 +10,7 @@ const Qrscan = (props) => {
         onResult={(result, error) => {
           if (!!result) {
             setData(result?.text);
-            window.open(result.text, '_blank'); // Open the link in a new tab
-
+            window.open(result.text, '_blank');
           }
 
           if (!!error) {
