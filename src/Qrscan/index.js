@@ -2,26 +2,38 @@ import React, { useState } from 'react';
 import { QrReader } from 'react-qr-reader';
 
 const Qrscan = (props) => {
-  const [data, setData] = useState('No result');
+  const [data, setData] = useState('Pas de résultat pour le moment');
+
+
+  const handleScan = (result) => {
+    if (result) {
+      setData(result.text);
+      window.open(result.text, '_blank'); 
+    }
+  };
+
+
+  const handleError = (error) => {
+    console.error(error);
+  };
+
 
   return (
     <>
       <QrReader
-        onResult={(result, error) => {
-          if (!!result) {
-            setData(result?.text);
-            window.open(result.text, '_blank');
-          }
-
-          if (!!error) {
-            console.info(error);
-          }
-        }}
-        style={{ width: '100%' }}
+        onScan={handleScan}
+        onError={handleError}
+        style={{ width: '60%' }}
       />
-      <p>{data}</p>
+      {data && (
+        <p>
+          Lien : {' '}
+          <a href={data} target="_blank" rel="noopener noreferrer">
+            {data}
+          </a>
+        </p>
+      )}
     </>
   );
 };
-
 export default Qrscan;
